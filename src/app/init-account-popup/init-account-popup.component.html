@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Do you have an account in our bank?</h1>
+<div mat-dialog-content>
+  <p>Insert the account id</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.accountId" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="create()">Create</button>
+  <button mat-button (click)="search()" cdkFocusInitial>Search</button>
+</div>

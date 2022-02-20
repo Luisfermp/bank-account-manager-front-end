@@ -11,9 +11,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import { InitAccountPopupComponent } from './init-account-popup/init-account-popup.component';
+import { FormsModule } from '@angular/forms'
 
 registerLocaleData(localeEs)
 
@@ -22,21 +25,23 @@ registerLocaleData(localeEs)
     AppComponent,
     SummaryListComponent,
     AccountMovementComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    InitAccountPopupComponent
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' },
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
     MatTableModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatInputModule
   ],
   bootstrap: [AppComponent]
 })

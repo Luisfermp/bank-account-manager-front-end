@@ -1,1 +1,9 @@
-<p>account-movement works!</p>
+<h1 mat-dialog-title>Wich amount want to insert/withdraw into your account? (negative amount is allowed)</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.amount" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClick()">Insert</button>
+</div>
