@@ -12,11 +12,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { InitAccountPopupComponent } from './init-account-popup/init-account-popup.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 registerLocaleData(localeEs)
 
@@ -41,7 +43,10 @@ registerLocaleData(localeEs)
     MatIconModule,
     MatTableModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatSnackBarModule
+
   ],
   bootstrap: [AppComponent]
 })

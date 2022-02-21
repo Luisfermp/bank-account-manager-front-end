@@ -10,7 +10,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  color: white;
+  color: #3f51b5;
   font-weight: 600;
 }
 
@@ -45,4 +45,9 @@
 
 app-summary-table {
   width: 100%;
+}
+
+.balance-summary {
+  margin-top: 1em;
+  margin-left: 1em;
 }
