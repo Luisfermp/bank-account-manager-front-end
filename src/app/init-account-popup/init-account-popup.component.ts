@@ -15,7 +15,7 @@ export class InitAccountPopupComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<AppComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { accountId: number },
+    @Inject(MAT_DIALOG_DATA) public data: { accountId: any },
     public accountBalanceService: AccountBalanceService,
     public shareDataService: ShareDataService,
     public snackBar: MatSnackBar
@@ -26,7 +26,7 @@ export class InitAccountPopupComponent implements OnInit {
 
   create() {
     this.accountBalanceService.createAccountBalance(this.data.accountId, 0).subscribe(() => {
-      this.shareDataService.updateAccountBalance({ id: this.data.accountId, balance: 0} as AccountBalance)
+      this.shareDataService.updateAccountBalance({ id: parseInt(this.data.accountId, 0), balance: 0} as AccountBalance)
       this.dialogRef.close()
     }, ({error }) => {
       this.openSnackBar(error.message)
